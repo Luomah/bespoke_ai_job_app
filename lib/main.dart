@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     ScreenUtil.init(
       context,
-      designSize: const Size(390, 852),
+      designSize: const Size(390, 844),
     );
 
     return MaterialApp(
@@ -25,6 +25,13 @@ class MyApp extends StatelessWidget {
         bottomNavigationBarTheme: const BottomNavigationBarThemeData(
           selectedItemColor: Color(0XFF092C4C),
           unselectedItemColor: Color(0XFF6A6A6A),
+        ),
+        elevatedButtonTheme: ElevatedButtonThemeData(
+          style: ElevatedButton.styleFrom(
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4.sp),
+            ),
+          ),
         ),
       ),
       debugShowCheckedModeBanner: false,

@@ -1,3 +1,5 @@
+import 'package:bespoke_ai_job_app/features/home/ui/widgets/search_section_widget.dart';
+import 'package:bespoke_ai_job_app/features/home/ui/widgets/user_job_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -19,41 +21,33 @@ class HomeView extends StatelessWidget {
               ),
             ),
             Text("Find job through opportunities"),
-            SizedBox(height: 16.sp,),
+            SizedBox(
+              height: 16.h,
+            ),
+            SearchSectionWidget(),
+            SizedBox(
+              height: 16.h,
+            ),
+            UserJobCard(),
             Container(
-              height: 36,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Container(
-                    width: MediaQuery.of(context).size.width * 0.75,
-                    child: TextField(
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(4),
-                          borderSide: BorderSide(
-                            color:  Colors.grey.shade300,
-                          )
-                        )
-                      ),
-                    ),
+              child: ListTile(
+                contentPadding: EdgeInsets.zero,
+                trailing: Icon(Icons.arrow_forward_ios),
+                title: Text(
+                  "Complete your profile! 70%",
+                  style: TextStyle(
+                    fontSize: 16.sp,
                   ),
-                  ElevatedButton.icon(
-                    style: ElevatedButton.styleFrom(
-                      shape: RoundedRectangleBorder(
-                        side: BorderSide(
-                          color: Colors.grey,
-                          
-                        ),
-                        borderRadius: BorderRadius.circular(4),
-                      ),
-                      minimumSize: Size(45,45),
-                      padding: EdgeInsets.zero
-                    ),
-                    onPressed: () {},
-                    label: Icon(Icons.filter_list),
-                  )
-                ],
+                ),
+                subtitle: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text("It is required to submit an application"),
+                    LinearProgressIndicator(
+                      value: 0.7,
+                    )
+                  ],
+                ),
               ),
             )
           ],
