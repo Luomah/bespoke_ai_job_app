@@ -1,3 +1,5 @@
+import 'package:bespoke_ai_job_app/features/home/ui/widgets/job_post_item.dart';
+import 'package:bespoke_ai_job_app/features/home/ui/widgets/profile_notice_card.dart';
 import 'package:bespoke_ai_job_app/features/home/ui/widgets/search_section_widget.dart';
 import 'package:bespoke_ai_job_app/features/home/ui/widgets/user_job_card.dart';
 import 'package:flutter/material.dart';
@@ -29,27 +31,23 @@ class HomeView extends StatelessWidget {
               height: 16.h,
             ),
             UserJobCard(),
+            ProfileCompletionNoticeCard(),
             Container(
-              child: ListTile(
-                contentPadding: EdgeInsets.zero,
-                trailing: Icon(Icons.arrow_forward_ios),
-                title: Text(
-                  "Complete your profile! 70%",
-                  style: TextStyle(
-                    fontSize: 16.sp,
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Recommendation",
+                    style: TextStyle(fontSize: 20.sp),
                   ),
-                ),
-                subtitle: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text("It is required to submit an application"),
-                    LinearProgressIndicator(
-                      value: 0.7,
-                    )
-                  ],
-                ),
+                  TextButton(
+                    onPressed: () {},
+                    child: Text("See All"),
+                  )
+                ],
               ),
-            )
+            ),
+            const JobPostItem()
           ],
         ),
       ),
