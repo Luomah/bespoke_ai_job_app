@@ -47,7 +47,7 @@ class HomeView extends StatelessWidget {
                 ],
               ),
             ),
-            const JobPostItem()
+            const JobPostItem(),
           ],
         ),
       ),

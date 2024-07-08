@@ -1,7 +1,7 @@
 import 'package:bespoke_ai_job_app/features/home/ui/pages/home_view.dart';
 import 'package:bespoke_ai_job_app/features/jobs/ui/pages/jobs_page.dart';
 import 'package:bespoke_ai_job_app/features/profile/ui/pages/profile_page.dart';
-import 'package:bespoke_ai_job_app/features/resume/ui/pages/resume_pages.dart';
+import 'package:bespoke_ai_job_app/features/resume/ui/pages/resume_page.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
@@ -16,7 +16,7 @@ class _HomePageState extends State<HomePage> {
 
   final _listOfPages = [
     const HomeView(),
-    const ResumePages(),
+    const ResumePage(),
     const JobsPage(),
     const ProfilePage(),
   ];
